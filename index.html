@@ -75,7 +75,11 @@
     .card strong { color:var(--text-white); font-weight:600; }
 
     #blog { background: #0a0c16; }
-    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; max-width:1100px; }
+    .blog-grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:1.5rem; max-width:1200px;
+    }
     .blog-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:1.8rem; transition:transform 0.25s,border-color 0.25s; cursor:pointer; }
     .blog-card:hover { transform:translateY(-5px); border-color:var(--accent); }
     .blog-tag { display:inline-block; background:var(--accent-glow); color:var(--accent); font-size:0.75rem; font-weight:500; padding:0.25rem 0.75rem; border-radius:20px; margin-bottom:0.8rem; text-transform:uppercase; letter-spacing:0.5px; }
@@ -129,24 +133,77 @@
 <section id="blog">
   <h2 class="section-title fade-in">My Blog</h2>
   <div class="blog-grid fade-in">
+
     <div class="blog-card">
-      <span class="blog-tag">Web Dev</span>
+      <span class="blog-tag">🎓 UET</span>
+      <h3>How I Got Admission in UET</h3>
+      <p>My journey of preparing for UET entry test, the struggles I faced, and how I finally got admitted into one of Pakistan's top engineering universities.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">🐍 Python</span>
+      <h3>My First Python Project in Semester 1</h3>
+      <p>In my very first semester at UET, I built a Python project. Here's what I learned, the challenges I faced, and how it boosted my confidence in programming.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">📚 Study Tips</span>
+      <h3>How to Survive First Semester at UET</h3>
+      <p>First semester at UET is tough. I share my personal tips on managing time, studying smart, and staying motivated during the most challenging start of engineering.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">🧪 Entry Test</span>
+      <h3>UET Entry Test Preparation Guide</h3>
+      <p>A complete guide on how to prepare for the UET ECAT — which subjects to focus on, which books to follow, and how to manage your time effectively before the test.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">💻 Web Dev</span>
       <h3>Getting Started with HTML & CSS</h3>
-      <p>A beginner's guide to building your first webpage from scratch.</p>
-      <p class="blog-date">March 2024</p>
+      <p>A beginner's guide to building your first webpage. I share how I started web development alongside my engineering studies and why every CS student should learn it.</p>
+      <p class="blog-date">2024</p>
     </div>
+
     <div class="blog-card">
-      <span class="blog-tag">JavaScript</span>
-      <h3>Understanding JavaScript DOM</h3>
-      <p>How to manipulate the DOM to create interactive web pages.</p>
-      <p class="blog-date">February 2024</p>
+      <span class="blog-tag">🐍 Python</span>
+      <h3>Python Basics Every Beginner Must Know</h3>
+      <p>Variables, loops, functions, and more — the core Python concepts I learned in my first semester that every beginner programmer should master before anything else.</p>
+      <p class="blog-date">2024</p>
     </div>
+
     <div class="blog-card">
-      <span class="blog-tag">Career</span>
-      <h3>My Journey into Computer Engineering</h3>
-      <p>Sharing my experience of transitioning from ICS to Computer Engineering.</p>
-      <p class="blog-date">January 2024</p>
+      <span class="blog-tag">🏫 Campus Life</span>
+      <h3>Life at UET — What to Expect</h3>
+      <p>From the campus environment to lab sessions and professors, I share my honest experience of what life at UET looks like for a first-year Computer Engineering student.</p>
+      <p class="blog-date">2024</p>
     </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">🤖 AI Tools</span>
+      <h3>How I Use AI Tools as an Engineering Student</h3>
+      <p>As a student who loves technology, I explore how AI tools like ChatGPT and Claude help me study better, debug code faster, and learn new concepts quickly.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">⚡ JavaScript</span>
+      <h3>Understanding JavaScript — My Experience</h3>
+      <p>After learning HTML & CSS, I jumped into JavaScript. Here I share my honest experience learning JS as an engineering student with no prior programming background.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
+    <div class="blog-card">
+      <span class="blog-tag">🚀 Goals</span>
+      <h3>My Goals as a Computer Engineering Student</h3>
+      <p>Why I chose Computer Engineering, what I want to achieve in the next 4 years, and how I plan to combine web development with my engineering degree to build a career.</p>
+      <p class="blog-date">2024</p>
+    </div>
+
   </div>
 </section>
 
