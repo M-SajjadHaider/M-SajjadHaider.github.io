@@ -1,52 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Sajjad Haider</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sajjad Haider | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --bg-dark: #0d0f1a;
+      --bg-card: #141726;
+      --accent: #ff4d6d;
+      --accent-glow: rgba(255, 77, 109, 0.3);
+      --text-white: #f0f2ff;
+      --text-muted: #8a90b0;
+      --nav-bg: rgba(13, 15, 26, 0.95);
+      --border: rgba(255,77,109,0.15);
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg-dark); color: var(--text-white); overflow-x: hidden; }
+
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: var(--nav-bg); backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%; height: 64px;
+    }
+    .nav-logo { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--accent); text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { color: var(--text-white); text-decoration: none; font-size: 0.95rem; transition: color 0.25s; position: relative; }
+    .nav-links a::after { content:''; position:absolute; bottom:-4px; left:0; width:0; height:2px; background:var(--accent); border-radius:2px; transition:width 0.25s; }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-links a:hover::after { width: 100%; }
+
+    #home {
+      min-height: 100vh;
+      background: linear-gradient(135deg, #0d0f1a 0%, #0d1b2e 60%, #0f2340 100%);
+      display: flex; align-items: center; justify-content: center; text-align: center;
+      position: relative; overflow: hidden;
+    }
+    #home::before {
+      content:''; position:absolute; inset:0;
+      background-image: linear-gradient(rgba(255,77,109,0.04) 1px,transparent 1px), linear-gradient(90deg,rgba(255,77,109,0.04) 1px,transparent 1px);
+      background-size: 60px 60px; pointer-events:none;
+    }
+    #home::after {
+      content:''; position:absolute; width:600px; height:600px; border-radius:50%;
+      background: radial-gradient(circle, rgba(255,77,109,0.12) 0%, transparent 70%);
+      top:50%; left:50%; transform:translate(-50%,-50%); pointer-events:none;
+    }
+    .hero-content { position:relative; z-index:2; animation: fadeUp 0.9s ease both; }
+    .hero-content h1 { font-family:'Syne',sans-serif; font-size: clamp(2.2rem,5vw,3.8rem); font-weight:800; color:var(--text-white); margin-bottom:1rem; }
+    .hero-content h1 span { color: var(--accent); }
+    .hero-subtitle { color:var(--text-muted); font-size:1.05rem; font-weight:300; margin-bottom:2.5rem; }
+    .btn-primary {
+      display:inline-block; background:var(--accent); color:#fff;
+      padding:0.85rem 2.4rem; border-radius:50px; font-weight:500; font-size:1rem;
+      text-decoration:none; transition:transform 0.25s, box-shadow 0.25s;
+      box-shadow: 0 4px 24px var(--accent-glow);
+    }
+    .btn-primary:hover { transform:translateY(-3px); box-shadow:0 8px 32px var(--accent-glow); }
+
+    section { padding: 100px 5%; }
+    .section-title {
+      font-family:'Syne',sans-serif; font-size:2rem; font-weight:800; color:var(--accent);
+      margin-bottom:2rem; display:flex; align-items:center; gap:1rem;
+    }
+    .section-title::before { content:''; display:block; width:5px; height:2rem; background:var(--accent); border-radius:3px; }
+
+    .card { background:var(--bg-card); border:1px solid var(--border); border-radius:18px; padding:2.2rem 2.5rem; max-width:900px; line-height:1.85; color:#bfc5e0; }
+    .card p { margin-bottom:1rem; }
+    .card p:last-child { margin-bottom:0; }
+    .card strong { color:var(--text-white); font-weight:600; }
+
+    #blog { background: #0a0c16; }
+    .blog-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:1.5rem; max-width:1100px; }
+    .blog-card { background:var(--bg-card); border:1px solid var(--border); border-radius:16px; padding:1.8rem; transition:transform 0.25s,border-color 0.25s; cursor:pointer; }
+    .blog-card:hover { transform:translateY(-5px); border-color:var(--accent); }
+    .blog-tag { display:inline-block; background:var(--accent-glow); color:var(--accent); font-size:0.75rem; font-weight:500; padding:0.25rem 0.75rem; border-radius:20px; margin-bottom:0.8rem; text-transform:uppercase; letter-spacing:0.5px; }
+    .blog-card h3 { font-family:'Syne',sans-serif; font-size:1.05rem; font-weight:700; color:var(--text-white); margin-bottom:0.6rem; }
+    .blog-card p { color:var(--text-muted); font-size:0.9rem; line-height:1.6; }
+    .blog-date { font-size:0.8rem; color:var(--text-muted); margin-top:1rem; }
+
+    .contact-card { background:var(--bg-card); border:1px solid var(--border); border-radius:18px; padding:2.2rem 2.5rem; max-width:700px; }
+    .contact-item { display:flex; align-items:center; gap:1rem; padding:0.9rem 0; border-bottom:1px solid rgba(255,255,255,0.05); font-size:1rem; color:#bfc5e0; }
+    .contact-item:last-child { border-bottom:none; }
+    .contact-icon { font-size:1.3rem; }
+    .contact-item a { color:var(--accent); text-decoration:none; }
+    .contact-item a:hover { text-decoration:underline; }
+
+    footer { text-align:center; padding:2rem; background:#080a13; color:var(--text-muted); font-size:0.88rem; border-top:1px solid var(--border); }
+
+    @keyframes fadeUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+    .fade-in { opacity:0; transform:translateY(24px); transition:opacity 0.7s ease,transform 0.7s ease; }
+    .fade-in.visible { opacity:1; transform:translateY(0); }
+  </style>
 </head>
 <body>
+
 <nav>
-    <div class="logo">Sajjad Haider</div>
-    <div class="nav-links">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-    </div>
+  <a class="nav-logo" href="#home">Sajjad Haider</a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#blog">Blog</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 </nav>
-<section id="home" class="hero">
+
+<section id="home">
+  <div class="hero-content">
     <h1>Hello, I am <span>Sajjad Haider</span></h1>
-    <p>Computer Engineering Student | Web Developer</p>
-    <a href="#about" class="btn">Know More</a>
+    <p class="hero-subtitle">Computer Engineering Student &nbsp;|&nbsp; Web Developer</p>
+    <a href="#about" class="btn-primary">Know More</a>
+  </div>
 </section>
-<section id="about" class="section">
-    <h2>About Me</h2>
-    <div class="card">
-        <p>My name is <strong>Sajjad Haider</strong>. I am a Computer Engineering student.</p>
-        <p>I did my Intermediate with <strong>ICS (Computer Science)</strong> and now pursuing Computer Engineering.</p>
-        <p>I love to learn new technologies and build amazing projects.</p>
+
+<section id="about">
+  <h2 class="section-title fade-in">About Me</h2>
+  <div class="card fade-in">
+    <p>My name is <strong>Sajjad Haider</strong>. I am a Computer Engineering student.</p>
+    <p>I did my Intermediate with <strong>ICS (Computer Science)</strong> and now pursuing Computer Engineering.</p>
+    <p>I love to learn new technologies and build amazing projects.</p>
+  </div>
+</section>
+
+<section id="blog">
+  <h2 class="section-title fade-in">My Blog</h2>
+  <div class="blog-grid fade-in">
+    <div class="blog-card">
+      <span class="blog-tag">Web Dev</span>
+      <h3>Getting Started with HTML & CSS</h3>
+      <p>A beginner's guide to building your first webpage from scratch.</p>
+      <p class="blog-date">March 2024</p>
     </div>
-</section>
-<section id="blog" class="section">
-    <h2>My Blog</h2>
-    <div class="card">
-        <h3>My Journey in Tech</h3>
-        <p>Welcome to my blog. Here I will share my thoughts and projects.</p>
-        <p>I am a student of Computer Engineering. I love to learn new things and build projects.</p>
-        <p>I have done my Intermediate with ICS (Computer Science) before joining Computer Engineering.</p>
+    <div class="blog-card">
+      <span class="blog-tag">JavaScript</span>
+      <h3>Understanding JavaScript DOM</h3>
+      <p>How to manipulate the DOM to create interactive web pages.</p>
+      <p class="blog-date">February 2024</p>
     </div>
-</section>
-<section id="contact" class="section">
-    <h2>Contact Me</h2>
-    <div class="card">
-        <p>📧 Email: sajjad@email.com</p>
-        <p>📍 Location: Pakistan</p>
-        <p>💻 GitHub: github.com/sajjadhaider</p>
+    <div class="blog-card">
+      <span class="blog-tag">Career</span>
+      <h3>My Journey into Computer Engineering</h3>
+      <p>Sharing my experience of transitioning from ICS to Computer Engineering.</p>
+      <p class="blog-date">January 2024</p>
     </div>
+  </div>
 </section>
-<footer>
-    <p>© 2024 Sajjad Haider. All Rights Reserved.</p>
-</footer>
+
+<section id="contact">
+  <h2 class="section-title fade-in">Contact Me</h2>
+  <div class="contact-card fade-in">
+    <div class="contact-item">
+      <span class="contact-icon">📧</span>
+      <span>Email: <a href="mailto:sajjad@email.com">sajjad@email.com</a></span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">📍</span>
+      <span>Location: Pakistan</span>
+    </div>
+    <div class="contact-item">
+      <span class="contact-icon">💻</span>
+      <span>GitHub: <a href="https://github.com/sajjadhaider" target="_blank">github.com/sajjadhaider</a></span>
+    </div>
+  </div>
+</section>
+
+<footer>&copy; 2024 Sajjad Haider. All Rights Reserved.</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('visible'); observer.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
