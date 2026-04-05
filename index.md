@@ -5,74 +5,83 @@ title: Home
 
 <style>
   body {
-    background: linear-gradient(135deg, #141e30, #243b55);
-    color: #ffffff;
-    font-family: Arial, sans-serif;
+    background: #f8fafc;
+    color: #0f172a;
+    font-family: 'Segoe UI', sans-serif;
   }
 
   .hero {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(10px);
+    background: #ffffff;
     border-radius: 20px;
     padding: 70px 40px;
     text-align: center;
     margin-bottom: 40px;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   }
 
   .hero h1 {
     font-size: 42px;
     margin-bottom: 10px;
-    color: #00f5d4;
+    color: #2563eb;
   }
 
   .hero p {
     font-size: 18px;
-    color: #d1d5db;
+    color: #475569;
   }
 
+  /* 4 COLUMN GRID */
   .info-cards {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
   }
 
-  @media (max-width: 768px) {
+  /* Tablet */
+  @media (max-width: 992px) {
+    .info-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 576px) {
     .info-cards {
       grid-template-columns: 1fr;
     }
   }
 
   .card {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(12px);
+    background: #ffffff;
     border-radius: 15px;
     padding: 25px;
     text-align: center;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid #e2e8f0;
     transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
   }
 
   .card:hover {
-    transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(37,99,235,0.15);
   }
 
   .card .icon {
-    font-size: 30px;
+    font-size: 32px;
     margin-bottom: 10px;
   }
 
   .card h3 {
     font-size: 14px;
-    color: #cbd5e1;
+    color: #64748b;
     margin-bottom: 5px;
   }
 
   .card p {
     font-size: 16px;
     font-weight: bold;
-    color: #ffffff;
+    color: #0f172a;
   }
 </style>
 
