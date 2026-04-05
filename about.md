@@ -1,12 +1,13 @@
 ---
 layout: default
 title: About
+permalink: /about/
 ---
 
 <style>
 .about-container {
   max-width: 800px;
-  margin: 60px auto;
+  margin: 80px auto;
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
   padding: 40px;
@@ -48,7 +49,7 @@ title: About
 
   <p>My name is <strong>Sajjad Haider</strong>.</p>
   <p>I am a <strong>Computer Engineering student</strong>.</p>
-  <p>I am passionate about learning new technologies and building modern web projects.</p>
+  <p>I am from <strong>Mian Channu</strong>.</p>
 
   <div class="skills">
     <span>Web Development 💻</span>
