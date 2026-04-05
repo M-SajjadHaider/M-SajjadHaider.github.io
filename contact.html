@@ -1,126 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Contact | Sajjad Haider</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
-<style>
-*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
-:root{
-  --bg:#0d0f1a;--bg2:#141726;
-  --accent:#ff4d6d;--glow:rgba(255,77,109,0.25);
-  --tw:#f0f2ff;--tm:#8a90b0;
-  --nav:rgba(13,15,26,0.97);--br:rgba(255,77,109,0.15);
-}
-html,body{min-height:100%;font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tw)}
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  background:var(--nav);backdrop-filter:blur(14px);
-  border-bottom:1px solid var(--br);
-  display:flex;align-items:center;justify-content:space-between;
-  padding:0 6%;height:62px;
-}
-.logo{font-family:'Syne',sans-serif;font-weight:800;font-size:1.2rem;color:var(--accent);text-decoration:none}
-.nav-links{display:flex;gap:2rem;list-style:none}
-.nav-links a{
-  color:var(--tm);text-decoration:none;font-size:0.92rem;
-  padding:6px 0;position:relative;transition:color 0.2s;
-}
-.nav-links a::after{
-  content:'';position:absolute;bottom:-2px;left:0;
-  width:0;height:2px;background:var(--accent);
-  border-radius:2px;transition:width 0.25s;
-}
-.nav-links a:hover,.nav-links a.active{color:var(--accent)}
-.nav-links a.active::after,.nav-links a:hover::after{width:100%}
-main{
-  min-height:100vh;padding:120px 6% 60px;
-  display:flex;flex-direction:column;align-items:flex-start;
-}
-.sec-title{
-  font-family:'Syne',sans-serif;font-size:1.9rem;font-weight:800;
-  color:var(--accent);margin-bottom:2.5rem;
-  display:flex;align-items:center;gap:1rem;
-}
-.sec-title::before{content:'';display:block;width:5px;height:1.9rem;background:var(--accent);border-radius:3px}
-.con-card{
-  background:var(--bg2);border:1px solid var(--br);
-  border-radius:18px;padding:2.2rem 2.6rem;
-  width:100%;max-width:680px;
-}
-.ci{
-  display:flex;align-items:center;gap:1.2rem;
-  padding:1rem 0;border-bottom:1px solid rgba(255,255,255,0.05);
-  font-size:0.97rem;color:#bfc5e0;
-}
-.ci:last-child{border-bottom:none}
-.ico{
-  width:42px;height:42px;border-radius:10px;
-  background:rgba(255,77,109,0.1);border:1px solid var(--br);
-  display:flex;align-items:center;justify-content:center;
-  font-size:1.1rem;flex-shrink:0;
-}
-.ci-info{display:flex;flex-direction:column;gap:2px}
-.ci-label{font-size:0.75rem;color:var(--tm);text-transform:uppercase;letter-spacing:0.6px}
-.ci-value{color:var(--tw);font-size:0.97rem}
-.ci-value a{color:var(--accent);text-decoration:none}
-.ci-value a:hover{text-decoration:underline}
-footer{
-  margin-top:auto;padding-top:3rem;width:100%;
-  text-align:center;color:var(--tm);font-size:0.85rem;
-  border-top:1px solid var(--br);
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Grok</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<nav>
-  <a class="logo" href="index.html">Sajjad Haider</a>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="contact.html" class="active">Contact</a></li>
-  </ul>
-</nav>
-<main>
-  <h2 class="sec-title">Contact Me</h2>
-  <div class="con-card">
+    <header>
+        <nav>
+            <div class="logo">Grok</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Insights</a>
+            </div>
+        </nav>
+    </header>
 
-    <div class="ci">
-      <div class="ico">📱</div>
-      <div class="ci-info">
-        <span class="ci-label">Phone</span>
-        <span class="ci-value"><a href="tel:03073398978">0307 339 8978</a></span>
-      </div>
-    </div>
+    <main>
+        <h1 style="text-align:center; margin: 60px 0 40px;">Get in Touch</h1>
+       
+        <div class="card" style="max-width: 700px; margin: 0 auto;">
+            
+            <h2 style="margin-bottom: 25px; text-align: center;">Contact Information</h2>
+            
+            <div style="text-align: center; margin-bottom: 40px; line-height: 2.2;">
+                <p><strong>Sajjad Haider</strong><br>
+                BSC Computer Engineering Student</p>
+                
+                <p>
+                    📧 <a href="mailto:haider158ce@gmail.com" style="color:#00ff9d; text-decoration:none;">haider158ce@gmail.com</a><br>
+                    📱 <a href="tel:+923073398978" style="color:#00ff9d; text-decoration:none;">+92 307 3398978</a>
+                </p>
+            </div>
 
-    <div class="ci">
-      <div class="ico">📧</div>
-      <div class="ci-info">
-        <span class="ci-label">Email</span>
-        <span class="ci-value"><a href="mailto:haider158ce@email.com">haider158ce@email.com</a></span>
-      </div>
-    </div>
+            <p style="text-align: center; margin-bottom: 30px;">
+                You can also interact with Grok directly on 
+                <a href="https://grok.x.ai" target="_blank" style="color:#00ff9d;">grok.x.ai</a>
+            </p>
 
-    <div class="ci">
-      <div class="ico">📍</div>
-      <div class="ci-info">
-        <span class="ci-label">Location</span>
-        <span class="ci-value">Pakistan</span>
-      </div>
-    </div>
+            <hr style="border: 1px solid #333; margin: 30px 0;">
 
-    <div class="ci">
-      <div class="ico">💻</div>
-      <div class="ci-info">
-        <span class="ci-label">GitHub</span>
-        <span class="ci-value"><a href="https://github.com/M-SajjadHaider" target="_blank">github.com/M-SajjadHaider</a></span>
-      </div>
-    </div>
+            <h3 style="margin-bottom: 20px;">Send a Message</h3>
+            
+            <form style="margin-top: 20px;">
+                <input type="text" placeholder="Your Name" 
+                       style="width:100%; padding:12px; margin:10px 0; background:#222; border:1px solid #444; color:white; border-radius:8px;">
+                
+                <input type="email" placeholder="Your Email" 
+                       style="width:100%; padding:12px; margin:10px 0; background:#222; border:1px solid #444; color:white; border-radius:8px;">
+                
+                <textarea placeholder="Your Message" rows="6" 
+                          style="width:100%; padding:12px; margin:10px 0; background:#222; border:1px solid #444; color:white; border-radius:8px;"></textarea>
+                
+                <button type="button" class="btn" style="width:100%; margin-top: 10px;">Send Message</button>
+            </form>
+        </div>
+    </main>
 
-  </div>
-  <footer>&copy; 2025 Sajjad Haider. All Rights Reserved.</footer>
-</main>
+    <footer>
+        <p>&copy; 2026 Grok by xAI • Personal Site by Sajjad Haider</p>
+    </footer>
 </body>
 </html>
