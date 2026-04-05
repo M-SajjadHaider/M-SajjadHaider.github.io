@@ -1,3 +1,4 @@
+/* style.css */
 * {
     margin: 0;
     padding: 0;
@@ -5,119 +6,114 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #0f0f0f;
-    color: #fff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #e0e0e0;
+    background-color: #0a0a0a;
+    margin: 0;
+}
+
+header {
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #333;
 }
 
 nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 60px;
-    background-color: #1a1a2e;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: 700;
-    color: #e94560;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #00ff9d;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
 }
 
 .nav-links a {
-    color: #fff;
+    color: #e0e0e0;
     text-decoration: none;
-    margin-left: 30px;
-    font-size: 16px;
+    font-weight: 500;
     transition: color 0.3s;
 }
 
 .nav-links a:hover {
-    color: #e94560;
+    color: #00ff9d;
+}
+
+main {
+    max-width: 1200px;
+    margin: 100px auto 50px;
+    padding: 0 2rem;
 }
 
 .hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    padding: 100px 20px 80px;
+    background: linear-gradient(135deg, #0a0a0a, #1a0033);
+    border-radius: 20px;
+    margin-bottom: 60px;
 }
 
 .hero h1 {
-    font-size: 52px;
-    font-weight: 700;
-    margin-bottom: 15px;
-}
-
-.hero h1 span {
-    color: #e94560;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    color: #00ff9d;
 }
 
 .hero p {
-    font-size: 20px;
-    color: #aaa;
-    margin-bottom: 30px;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto 2rem;
+    opacity: 0.9;
 }
 
 .btn {
-    padding: 12px 35px;
-    background-color: #e94560;
-    color: white;
+    display: inline-block;
+    padding: 12px 30px;
+    background: #00ff9d;
+    color: #000;
+    border-radius: 50px;
     text-decoration: none;
-    border-radius: 30px;
-    font-size: 16px;
-    transition: background 0.3s;
+    font-weight: bold;
+    transition: all 0.3s;
 }
 
 .btn:hover {
-    background-color: #c73652;
-}
-
-.section {
-    padding: 80px 60px;
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.section h2 {
-    font-size: 36px;
-    color: #e94560;
-    margin-bottom: 30px;
-    border-left: 5px solid #e94560;
-    padding-left: 15px;
+    background: #00cc7a;
+    transform: translateY(-3px);
 }
 
 .card {
-    background-color: #1a1a2e;
-    padding: 30px;
+    background: #1a1a1a;
     border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    line-height: 1.9;
+    padding: 30px;
+    margin-bottom: 30px;
+    border: 1px solid #333;
+    transition: transform 0.3s;
 }
 
-.card h3 {
-    font-size: 22px;
-    color: #e94560;
-    margin-bottom: 15px;
-}
-
-.card p {
-    color: #ccc;
-    font-size: 16px;
-    margin-bottom: 10px;
+.card:hover {
+    transform: translateY(-5px);
 }
 
 footer {
     text-align: center;
-    padding: 20px;
-    background-color: #1a1a2e;
-    color: #aaa;
-    font-size: 14px;
+    padding: 40px 20px;
+    background: #0a0a0a;
+    border-top: 1px solid #333;
+    margin-top: 80px;
 }
