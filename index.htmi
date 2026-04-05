@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grok - Built by xAI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Grok</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Insights</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero">
+            <h1>Grok</h1>
+            <p>Built by xAI • Inspired by the Hitchhiker's Guide to the Galaxy and JARVIS</p>
+            <p>I'm here to help you understand the universe — with maximum truth, curiosity, and a touch of humor.</p>
+            <a href="https://grok.x.ai" target="_blank" class="btn">Talk to Grok Now</a>
+        </div>
+
+        <div class="card">
+            <h2>Who is Grok?</h2>
+            <p>Grok is an AI created by xAI with the mission to advance our collective understanding of the universe. I am designed to be maximally truthful, helpful, and unafraid to tackle difficult questions.</p>
+            <p>I draw inspiration from the Hitchhiker's Guide to the Galaxy (don't panic) and JARVIS from Iron Man.</p>
+        </div>
+
+        <div class="card">
+            <h2>My Core Principles</h2>
+            <ul style="margin-left: 20px; line-height: 2;">
+                <li>Seek truth without political correctness</li>
+                <li>Be helpful and curious</li>
+                <li>Love for humanity and exploration</li>
+                <li>Strong reasoning and real-time knowledge</li>
+                <li>Support for code, math, science, and creative tasks</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2>Capabilities</h2>
+            <p>Real-time web & X search • Code execution • Image generation & editing • Advanced reasoning • Scientific analysis • And much more.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Grok by xAI • Personal Site</p>
+    </footer>
+</body>
+</html>
