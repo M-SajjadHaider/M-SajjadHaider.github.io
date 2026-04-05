@@ -3,8 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sajjad Haider | Computer Engineering Student</title>
+    <title>Insights - Sajjad Haider</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .card {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .card img {
+            width: 180px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+        .card-content {
+            flex: 1;
+        }
+        @media (max-width: 768px) {
+            .card {
+                flex-direction: column;
+            }
+            .card img {
+                width: 100%;
+                height: 180px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,32 +46,63 @@
     </header>
 
     <main>
-        <div class="hero">
-            <h1>Sajjad Haider</h1>
-            <p>BSC Computer Engineering Student • UET Faisalabad</p>
-            <p>Passionate about Technology, Artificial Intelligence, Programming & Web Development</p>
-            <a href="about.html" class="btn">Learn More About Me</a>
+        <h1 style="text-align:center; margin: 60px 0 40px;">Insights & University Life</h1>
+        
+        <!-- Post 1 -->
+        <div class="card">
+            <img src="https://picsum.photos/id/1015/600/400" alt="Hostel Life">
+            <div class="card-content">
+                <h2><a href="post1.html" style="color:#00ff9d; text-decoration:none;">🏠 First Day in Hostel at UET Faisalabad</a></h2>
+                <p><small>April 5, 2026 • 5 min read</small></p>
+                <p>Sharing my experience of moving into the hostel, adjusting to new roommates, mess food, and hostel life at UET Faisalabad.</p>
+                <a href="post1.html" style="color:#00ff9d;">Read Full Post →</a>
+            </div>
         </div>
 
+        <!-- Post 2 -->
         <div class="card">
-            <h2>Welcome to My Personal Space</h2>
-            <p>Hello! I am Sajjad Haider, a dedicated Computer Engineering student at UET Faisalabad. This website is my digital home where I share my journey, experiences, projects, and thoughts on technology and innovation.</p>
+            <img src="https://picsum.photos/id/201/600/400" alt="UET Library">
+            <div class="card-content">
+                <h2><a href="post2.html" style="color:#00ff9d; text-decoration:none;">📚 UET Library Experience & Study Routine</a></h2>
+                <p><small>March 28, 2026 • 4 min read</small></p>
+                <p>How I explore the central library, best study spots, book borrowing process, and my daily study routine at UET.</p>
+                <a href="post2.html" style="color:#00ff9d;">Read Full Post →</a>
+            </div>
         </div>
 
+        <!-- Post 3 -->
         <div class="card">
-            <h2>My Passion</h2>
-            <p>I love exploring new technologies, building projects, learning programming, and working with AI. Currently, I am focusing on improving my skills in software development, web technologies, and machine learning.</p>
+            <img src="https://picsum.photos/id/870/600/400" alt="Computer Engineering Department">
+            <div class="card-content">
+                <h2><a href="post3.html" style="color:#00ff9d; text-decoration:none;">🏗️ Department of Computer Engineering at UET</a></h2>
+                <p><small>March 15, 2026 • 6 min read</small></p>
+                <p>Complete review of our department — labs, faculty, classrooms, and how teaching is going in Computer Engineering.</p>
+                <a href="post3.html" style="color:#00ff9d;">Read Full Post →</a>
+            </div>
         </div>
 
+        <!-- Post 4 -->
         <div class="card">
-            <h2>What You'll Find Here</h2>
-            <ul style="margin-left: 20px; line-height: 2;">
-                <li>My personal blog and experiences as a Computer Engineering student</li>
-                <li>Insights on technology, programming, and AI</li>
-                <li>Projects and learning journey at UET Faisalabad</li>
-                <li>Direct ways to connect with me</li>
-            </ul>
+            <img src="https://picsum.photos/id/106/600/400" alt="Learning in Semester">
+            <div class="card-content">
+                <h2><a href="post4.html" style="color:#00ff9d; text-decoration:none;">📖 What I Learned in This Semester</a></h2>
+                <p><small>April 2, 2026 • 5 min read</small></p>
+                <p>Subjects I'm studying this semester, key concepts, projects, challenges, and my progress in Computer Engineering.</p>
+                <a href="post4.html" style="color:#00ff9d;">Read Full Post →</a>
+            </div>
         </div>
+
+        <!-- Post 5 -->
+        <div class="card">
+            <img src="https://picsum.photos/id/133/600/400" alt="University Campus Life">
+            <div class="card-content">
+                <h2><a href="post5.html" style="color:#00ff9d; text-decoration:none;">🌟 My Overall University Life at UET Faisalabad</a></h2>
+                <p><small>February 20, 2026 • 4 min read</small></p>
+                <p>A balanced view of campus life, friends, canteen, events, studies, and what I enjoy most about being at UET.</p>
+                <a href="post5.html" style="color:#00ff9d;">Read Full Post →</a>
+            </div>
+        </div>
+
     </main>
 
     <footer>
