@@ -1,107 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog | Sajjad Haider</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
-<style>
-body{
-  margin:0;
-  font-family:'DM Sans',sans-serif;
-  background:#0d0f1a;
-  color:white;
-}
-
-/* NAVBAR */
-nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#0d0f1a;
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-}
-
-nav a{
-  color:#aaa;
-  text-decoration:none;
-  margin-left:20px;
-}
-
-nav a:hover{
-  color:#ff4d6d;
-}
-
-/* MAIN */
-main{
-  padding:100px 20px;
-}
-
-h2{
-  color:#ff4d6d;
-}
-
-/* CARD */
-.card{
-  background:#141726;
-  padding:20px;
-  margin-bottom:20px;
-  border-radius:10px;
-  border:1px solid rgba(255,77,109,0.2);
-}
-
-.card h3{
-  margin-top:0;
-  color:white;
-}
-
-.card p{
-  color:#ccc;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights - Sajjad Haider</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+    <header>
+        <nav>
+            <div class="logo">Grok</div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog.html">Insights</a>
+            </div>
+        </nav>
+    </header>
 
-<nav>
-  <div>Sajjad Haider</div>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Blog</a>
-    <a href="#">Contact</a>
-  </div>
-</nav>
+    <main>
+        <h1 style="text-align:center; margin: 60px 0 40px;">Insights & Personal Experiences</h1>
+        
+        <div class="card">
+            <h2><a href="post1.html" style="color:#00ff9d; text-decoration:none;">🚀 My Journey in Computer Engineering</a></h2>
+            <p><small>April 5, 2026 • 4 min read</small></p>
+            <p>As a BSC Computer Engineering student, I am passionate about technology, AI, programming, and building real-world projects. This is the beginning of my tech journey...</p>
+            <a href="post1.html" style="color:#00ff9d;">Read Full Post →</a>
+        </div>
 
-<main>
+        <div class="card">
+            <h2><a href="#" style="color:#00ff9d; text-decoration:none;">🎓 Getting Admission in UET</a></h2>
+            <p><small>March 20, 2026 • 3 min read</small></p>
+            <p>Sharing my experience of preparing for university admission, the challenges I faced, and how I got into Computer Engineering at UET.</p>
+            <a href="#" style="color:#00ff9d;">Read Full Post →</a>
+        </div>
 
-<h2>My Blog</h2>
+        <div class="card">
+            <h2><a href="#" style="color:#00ff9d; text-decoration:none;">📘 First Semester Experience</a></h2>
+            <p><small>February 15, 2026 • 5 min read</small></p>
+            <p>From basic engineering subjects to my first Machine Learning project — what I learned in the first semester.</p>
+            <a href="#" style="color:#00ff9d;">Read Full Post →</a>
+        </div>
 
-<div class="card">
-  <h3>🚀 My Journey in Tech</h3>
-  <p>I am a Computer Engineering student. I love building projects and learning new technologies.</p>
-</div>
+        <div class="card">
+            <h2><a href="#" style="color:#00ff9d; text-decoration:none;">💻 Learning Web Development</a></h2>
+            <p><small>January 10, 2026 • 4 min read</small></p>
+            <p>How I started building websites and created this Grok personal site using HTML & CSS.</p>
+            <a href="#" style="color:#00ff9d;">Read Full Post →</a>
+        </div>
 
-<div class="card">
-  <h3>🎓 Admission at UET</h3>
-  <p>I got admission in Computer Engineering after hard work and preparation.</p>
-</div>
+    </main>
 
-<div class="card">
-  <h3>📘 1st Semester</h3>
-  <p>Learned basics of engineering and worked on Machine Learning project.</p>
-</div>
-
-<div class="card">
-  <h3>📗 2nd Semester</h3>
-  <p>Improved programming and web development skills.</p>
-</div>
-
-</main>
-
+    <footer>
+        <p>&copy; 2026 Grok by xAI • Personal Site by Sajjad Haider</p>
+    </footer>
 </body>
 </html>
